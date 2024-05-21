@@ -1,0 +1,6 @@
+{
+    "julia.NumThreads": 4,
+    "julia.additionalArgs": [
+        "--threads=4"
+    ]
+}
