@@ -1,0 +1,14 @@
+Simulated data parameters:
+N = 6.2
+T = 3.1
+tau = 3.5
+sigma = 0.04
+B_max = 6.0
+
+Time:
+tspan = (0, 1000)
+
+Initial conditions:
+B0 = [3.0, 0.0]
+h(p, t) = h
+noise0 = [1.0]
