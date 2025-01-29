@@ -1,12 +1,12 @@
 # FUNCTIONS NEDEED FOR THE MODEL
 
-module model_functions
+module SDDESolarDynamo
 
 """
 Include the following lines in the main script:
 ---
-include("./model_functions.jl")
-using .model_functions
+include("./SDDESolarDynamo.jl")
+using .SDDESolarDynamo
 ---
 
 """
