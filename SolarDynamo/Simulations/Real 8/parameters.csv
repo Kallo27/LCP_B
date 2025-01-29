@@ -1,8 +1,0 @@
-Parameter,Value
-N,10.9386
-T,7.59241
-tau,4.01755
-sigma,0.11192
-B_max,2.58543
-tspan,"[971, 1899]"
-dt,0.01
