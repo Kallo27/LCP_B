@@ -1,0 +1,35 @@
+name: Documentation
+
+on:
+  push:
+    branches:
+      - main  # Adjust if your default branch is different
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Set up Julia
+        uses: julia-actions/setup-julia@v1
+        with:
+          version: '1.11'  # Replace with your Julia version
+
+      - name: Install dependencies
+        run: julia --project=docs -e 'using Pkg; Pkg.instantiate()'
+
+      - name: Build documentation
+        run: julia --project=docs docs/make.jl
+
+      - name: Deploy to GitHub Pages
+        if: github.ref == 'refs/heads/main'
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: docs/build

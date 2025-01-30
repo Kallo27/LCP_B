@@ -40,4 +40,5 @@ makedocs(;
 deploydocs(;
     repo="github.com/Kallo27/LCP_B/tree/main/SSDESolarDynamo.jl",
     devbranch="main",
+    target="gh-pages",
 )
