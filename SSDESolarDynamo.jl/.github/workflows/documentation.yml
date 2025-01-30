@@ -21,8 +21,14 @@ jobs:
         with:
           version: '1.11'  # Replace with your Julia version
 
+      - name: Check Julia version
+        run: julia -v
+
       - name: Install dependencies
         run: julia --project=docs -e 'using Pkg; Pkg.instantiate()'
+
+      - name: Set DOCUMENTER_DEPLOYMENT environment variable
+        run: echo "DOCUMENTER_DEPLOYMENT=GitHubActions" >> $GITHUB_ENV
 
       - name: Build documentation
         run: julia --project=docs docs/make.jl
@@ -31,5 +37,5 @@ jobs:
         if: github.ref == 'refs/heads/main'
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GH_TOKEN }}
           publish_dir: docs/build

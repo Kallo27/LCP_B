@@ -2,3 +2,6 @@ name = "SSDESolarDynamo"
 uuid = "0abb69ea-cbcf-4a57-9585-c220974b64de"
 authors = ["kallo27 <lorenzocb01@gmail.com>"]
 version = "0.1.0"
+
+[deps]
+Documenter = "e30172f5-6c4f-45a0-9251-b9e0a0e72b39"
