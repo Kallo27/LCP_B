@@ -13,7 +13,7 @@ using Documenter
 makedocs(;
     modules=[SDDESolarDynamo],
     authors="Lorenzo Calandra Buonaura, Lucrezia Rossi, Andrea Turci",
-    repo="https://github.com/Kallo27/LCP_B",  # Keep this as a string
+    repo="https://github.com/Kallo27/LCP_B/tree/main/SSDESolarDynamo.jl",  # Keep this as a string
     sitename="SSDESolarDynamo.jl",
     checkdocs=:exports,
     format=Documenter.HTML(;
@@ -22,14 +22,18 @@ makedocs(;
         edit_link="main",
         assets=String[],
         inventory_version="0.1.0",
-        repolink="https://github.com/Kallo27/LCP_B"  # Set repolink explicitly
+        repolink="https://github.com/Kallo27/LCP_B/tree/main/SSDESolarDynamo.jl"  # Set repolink explicitly
     ),
-    pages=[
-        "index.md",
-        #"usage.md",
-        #"Example" => "example.md",
-        #"API" => "api.md",
-        #"Related packages" => "related.md"
+    pages= [
+        "Home" => "index.md",
+        "Getting started" => "usage.md",
+        "Modules" => [
+            "Model" => "modules/model.md",
+            "DirUtils" => "modules/dirmanaging.md",
+            "VisualizationTools" => "modules/visualization.md"
+        ],
+        "API" => "api.md",
+        #"FAQ" => "faq.md"
     ],
 )
 
